@@ -1,0 +1,148 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    min-height: 100vh;
+
+    background-color: #FFF8FB; 
+    color: #7A3E86; 
+
+    font-size: 1.2rem;
+    display: grid;
+   
+    grid-template: 
+    "heaeder" 100px
+    "inicio" 
+    "sobre" 
+    "productos" 
+    "testimonio" 
+    "contacto" 
+    "footer" 100px;  
+}
+
+
+/* Header */
+header{
+    position: sticky;
+    top: 0;
+    background-color: #E8D7F1; 
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
+    font-family: "Dancing Script", cursive;
+    grid-area: heaeder;
+}
+header nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+nav a img{
+    align-items: center;
+    width: 180px;
+    height: auto;
+    transition: transform 0.5s ease;
+}
+nav a img:hover{
+    transform: rotate(-5deg) scale(1.2);
+}
+
+nav ul{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav ul li{
+    padding: 8px 15px;     
+    background-color: #D4A5E6;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+
+    transition: transform 0.5s ease, background-color 0.3s ease;
+}
+
+nav ul li a{
+    color: #7A3E86;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+nav ul li:hover{
+    transform: scale(1.2) rotate(-5grad) ;
+    background-color: white;
+    
+}
+
+
+
+#inicio{
+    background-color: lightblue;
+    grid-area: inicio;
+}
+
+#sobre{
+    background-color: rgb(193, 217, 224);
+    grid-area: sobre;
+}
+
+
+#productos{
+    background-color: rgba(104, 194, 89, 0.672);
+    grid-area: productos;
+}
+
+#testimonio{
+    background-color: rgba(201, 193, 146, 0.672);
+    grid-area: testimonio;
+}
+
+#contacto{
+    background-color: rgba(223, 58, 204, 0.672);
+    grid-area: contacto;
+}
+
+footer{
+    font-family: "Dancing Script", cursive;
+    background-color: #E8D7F1;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-size: 2rem;
+    grid-area: footer;
+    color: black;
+}
+
+footer a{
+    padding: 8px 15px;    
+    background-color: #D4A5E6;
+    border-radius: 15px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.5s ease, background-color 0.3s ease;
+    
+
+}
+footer a:hover{
+    transform:  rotate(-5grad) scale(1.2);
+    background-color: white;
+}
+
+/* 
+Lila Pastel: #E8D7F1 – Un tono suave y acogedor para fondos o detalles.
+Lavanda: #D4A5E6 – Un morado delicado, ideal para destacar secciones o botones.
+Morado Cupcake: #B583C0 – Un tono más intenso y dulce, perfecto para encabezados o elementos llamativos.
+Violeta Profundo: #7A3E86 – Para contrastar o agregar profundidad a ciertos elementos.
+Blanco Crema: #FFF8FB – Un blanco cálido que complementa perfectamente los tonos morados.
+Blanco Suave: #F5F5FF – Un blanco ligeramente frío, ideal como fondo principal.
+*/
