@@ -1,7 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap');
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
 html {
@@ -28,6 +28,7 @@ body{
     "testimonio" 
     "contacto" 
     "footer" 100px;  
+    row-gap: 20px; /* Espacio vertical entre secciones */
 }
 
 
@@ -87,8 +88,47 @@ nav ul li:hover{
 
 
 #inicio{
-    background-color: lightblue;
+    
+    border-radius: 20px;
+    margin: 0px 20px;
     grid-area: inicio;
+    background-image: url("img/pastelfondo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column; /* Para apilar texto y botón */
+    align-items: center; /* Centrado horizontal */
+    justify-content: center; /* Centrado vertical */
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+}
+
+#inicio p{
+   
+   text-align: center;
+   font-family: "Dancing Script", cursive;
+   font-size: 4rem;
+    
+}
+
+#inicio a{
+    
+    border: #7A3E86 2px solid;
+    border-radius: 5px;
+    background-color: #E8D7F1;
+    font-family: "Roboto", sans-serif;
+    color: #7A3E86;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 10px 20px; /* Ajusta el tamaño del botón */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Sombra para hacer el botón más visible */
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    
+}
+
+#inicio a:hover{
+    background-color: #D4B8E1;
+    transform: scale(1.2);
 }
 
 #sobre{
