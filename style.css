@@ -19,7 +19,7 @@ body{
 
     font-size: 1.2rem;
     display: grid;
-   
+    row-gap: 20px; /* Espacio vertical entre secciones */
     grid-template: 
     "heaeder" 100px
     "inicio" 
@@ -28,12 +28,21 @@ body{
     "testimonio" 
     "contacto" 
     "footer" 100px;  
-    row-gap: 20px; /* Espacio vertical entre secciones */
+    
 }
 
+.titleSection{
+    color: #7A3E86;
+    text-align: center;
+    text-transform: uppercase; /* Convierte el texto a mayúsculas */
+    font-weight: bold; /* Opcional: hace que el texto sea más destacado */
+    letter-spacing: 2px; /* Opcional: aumenta el espacio entre las letras para mayor legibilidad */
+    font-size: 3rem; /* Puedes ajustar el tamaño según sea necesario */
+}
 
 /* Header */
 header{
+    z-index: 100;
     position: sticky;
     top: 0;
     background-color: #E8D7F1; 
@@ -69,7 +78,6 @@ nav ul li{
     background-color: #D4A5E6;
     border-radius: 15px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-
     transition: transform 0.5s ease, background-color 0.3s ease;
 }
 
@@ -77,21 +85,19 @@ nav ul li a{
     color: #7A3E86;
     font-size: 1.5rem;
     text-decoration: none;
+    font-weight: bold;
 }
 
 nav ul li:hover{
     transform: scale(1.2) rotate(-5grad) ;
-    background-color: white;
-    
+    background-color: white; 
 }
 
-
-
 #inicio{
-    
-    border-radius: 20px;
-    margin: 0px 20px;
     grid-area: inicio;
+    border-radius: 20px;
+    margin: 20px;
+    
     background-image: url("img/pastelfondo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -104,21 +110,21 @@ nav ul li:hover{
 }
 
 #inicio p{
-   
-   text-align: center;
-   font-family: "Dancing Script", cursive;
-   font-size: 4rem;
+    font-weight: bold; 
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-size: 4rem;
     
 }
 
-#inicio a{
-    
-    border: #7A3E86 2px solid;
+.buttton-nav {
+    text-decoration: none;
+    border: #7A3E86 2px dashed;
     border-radius: 5px;
     background-color: #E8D7F1;
     font-family: "Roboto", sans-serif;
     color: #7A3E86;
-    font-size: 1rem;
+    font-size: 1.5rem;
     cursor: pointer;
     padding: 10px 20px; /* Ajusta el tamaño del botón */
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Sombra para hacer el botón más visible */
@@ -126,21 +132,106 @@ nav ul li:hover{
     
 }
 
-#inicio a:hover{
+.buttton-nav:hover{
     background-color: #D4B8E1;
     transform: scale(1.2);
 }
 
 #sobre{
-    background-color: rgb(193, 217, 224);
+    border-radius: 20px;
+    margin: 50px 200px;
     grid-area: sobre;
+    background-color: #E8D7F1;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+    font-family: "Roboto", sans-serif;
+
+    
+}
+
+#sobre p{
+    color: #555555;
+    line-height: 1.5;
+    text-align: justify;
+}
+
+#sobre h2,h3,h4{
+    color: #7A3E86;    
+}
+
+#sobre h2,h4{
+    text-align: center;
+}
+
+#sobre img {
+    display: block;             /* Elimina el espacio debajo de la imagen */
+    margin: 0 auto;             /* Centra la imagen horizontalmente */
+    max-width: 100%;            /* Asegura que la imagen no se salga del contenedor */
+    height: auto;               /* Mantiene la proporción original de la imagen */
+    border-radius: 10px;        /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    object-fit: cover;          /* Ajusta la imagen al contenedor sin distorsionarla */
 }
 
 
 #productos{
-    background-color: rgba(104, 194, 89, 0.672);
+    border-radius: 20px;
+    margin: 50px 20px;
     grid-area: productos;
+    background-color: #E8D7F1;
+    padding: 20px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
+    font-family: "Roboto", sans-serif;
+    
 }
+#productos section{
+    gap: 50px;  /* Espacio entre los artículos */
+   display: grid;
+   grid-template-columns: repeat(3, 1fr); /* 3 columnas de ancho igual */
+}
+
+#productos section article{
+    cursor: pointer;
+    width: 400px;
+    
+    min-height: 500px;
+    /* FFF8FB */
+    background-color: #FFF8FB;
+    padding-top: 20px;
+    border-radius: 5px;
+    transition: transform 0.5s ease, background-color 0.5s ease;
+}
+
+#productos section article div{
+    padding: 5px 20px;
+}
+
+#productos section article div h4 {
+    color: #7A3E86;
+    font-style: bold;
+    font-size: 1.5rem;
+}
+#productos section article div p {
+    color: #555555;
+    line-height: 1.5;
+    font-size: 1.3rem;
+}
+
+#productos section article img {
+    display: block;             /* Elimina el espacio debajo de la imagen */
+    margin: 0 auto;             /* Centra la imagen horizontalmente */
+    max-width: 90%;            /* Asegura que la imagen no se salga del contenedor */
+    height: auto;               /* Mantiene la proporción original de la imagen */
+    border-radius: 10px;        /* Bordes redondeados para un estilo más suave */
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1); /* Sombra suave para dar profundidad */
+    object-fit: cover;          /* Ajusta la imagen al contenedor sin distorsionarla */
+}
+
+#productos section article:hover{
+    transform: scale(1.1);
+    background-color: #F5F5FF;
+}
+
 
 #testimonio{
     background-color: rgba(201, 193, 146, 0.672);
