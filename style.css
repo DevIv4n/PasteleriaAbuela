@@ -288,10 +288,130 @@ nav ul li:hover{
 }
 
 
-#contacto{
-    background-color: rgba(223, 58, 204, 0.672);
-    grid-area: contacto;
+/* Estilo general para la sección de contacto */
+#contacto {
+    background-color: #E8D7F1; /* Blanco crema para el fondo */
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
+    font-family: "Roboto", sans-serif;
+    max-width: 800px;
+    margin: 30px auto;
 }
+
+/* Encabezado de la sección */
+#contacto h3 {
+    color: #7A3E86; /* Violeta profundo para el texto */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Estilos para el formulario */
+#contacto form {
+    display: grid;
+    grid-gap: 20px;
+}
+
+/* Estilos para las etiquetas */
+#contacto label {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #7A3E86;
+    margin-bottom: 5px;
+}
+
+/* Estilos para los campos de entrada */
+#contacto input[type="text"] {
+    padding: 10px;
+    border: 2px solid #E8D7F1; /* Lila pastel para el borde */
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: #F5F5FF; /* Blanco suave para el fondo */
+    color: #555555;
+}
+
+#contacto input[type="text"]:focus {
+    border-color: #B583C0; /* Morado cupcake al enfocar */
+    outline: none;
+}
+
+/* Estilos para el botón de envío */
+#contacto button[type="submit"] {
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    background-color: #B583C0; /* Morado cupcake para el fondo */
+    color: #FFF;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contacto button[type="submit"]:hover {
+    background-color: #7A3E86; /* Violeta profundo al pasar el ratón */
+}
+
+/* Estilos para el mapa y las redes sociales */
+#contacto div {
+    margin-top: 30px;
+}
+
+/* Estilos para el mapa */
+#contacto iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    margin-bottom: 20px;
+}
+
+#contacto h5 {
+    color: #7A3E86; /* Violeta profundo para el texto */
+    font-size: 2rem;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Estilos para la lista de redes sociales */
+#contacto ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Espacio entre los iconos */
+}
+
+/* Estilos para los elementos de la lista */
+#contacto ul li {
+    display: inline;
+}
+
+#contacto ul li a {
+    text-decoration: none;
+    display: block;
+    width: 50px; /* Tamaño de los iconos */
+    height: 50px;
+    transition: transform 0.3s ease; /* Efecto al pasar el ratón */
+}
+
+#contacto ul li a:hover {
+    transform: scale(1.2); /* Agranda ligeramente el icono */
+}
+
+#contacto ul li a img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%; /* Hace los iconos redondos */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra alrededor de los iconos */
+    transition: box-shadow 0.3s ease; /* Efecto de sombra al pasar el ratón */
+}
+
+#contacto ul li a:hover img {
+    box-shadow: 0px 8px 24px rgba(0, 0, 0, 0.2); /* Sombra más fuerte al pasar el ratón */
+}
+
+
 
 footer{
     font-family: "Dancing Script", cursive;
@@ -302,6 +422,7 @@ footer{
     font-size: 2rem;
     grid-area: footer;
     color: black;
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
 }
 
 footer a{
