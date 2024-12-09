@@ -4,6 +4,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 
+/* MENU, SOBRE NOSOTROS, NUESTRO PRODUCTOS */
+:root {
+    --font-primary: "Roboto", sans-serif;
+    --font-secondary: "Dancing Script", cursive;
+
+    
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -21,13 +29,13 @@ body{
     display: grid;
     row-gap: 20px; /* Espacio vertical entre secciones */
     grid-template: 
-    "heaeder" 100px
+    "header" 100px
     "inicio" 
     "sobre" 
     "productos" 
     "testimonio" 
     "contacto" 
-    "footer" 100px;  
+    "footer" 100px; 
     
 }
 
@@ -47,8 +55,8 @@ header{
     top: 0;
     background-color: #E8D7F1; 
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); 
-    font-family: "Dancing Script", cursive;
-    grid-area: heaeder;
+    font-family: var(--font-secondary);
+    grid-area: header;
 }
 header nav{
     display: flex;
@@ -89,7 +97,7 @@ nav ul li a{
 }
 
 nav ul li:hover{
-    transform: scale(1.2) rotate(-5grad) ;
+    transform: scale(1.2) rotate(-5deg) ;
     background-color: white; 
 }
 
@@ -112,17 +120,17 @@ nav ul li:hover{
 #inicio p{
     font-weight: bold; 
     text-align: center;
-    font-family: "Dancing Script", cursive;
+    font-family: var(--font-secondary);
     font-size: 4rem;
     
 }
 
-.buttton-nav {
+.button-nav {
     text-decoration: none;
     border: #7A3E86 2px dashed;
     border-radius: 5px;
     background-color: #E8D7F1;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
     color: #7A3E86;
     font-size: 1.5rem;
     cursor: pointer;
@@ -132,19 +140,19 @@ nav ul li:hover{
     
 }
 
-.buttton-nav:hover{
+.button-nav:hover{
     background-color: #D4B8E1;
     transform: scale(1.2);
 }
 
 #sobre{
     border-radius: 20px;
-    margin: 50px 200px;
+    margin: 50px 20vw;
     grid-area: sobre;
     background-color: #E8D7F1;
     padding: 20px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
 
     
 }
@@ -181,7 +189,7 @@ nav ul li:hover{
     background-color: #E8D7F1;
     padding: 20px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
     
 }
 #productos section{
@@ -192,7 +200,7 @@ nav ul li:hover{
 
 #productos section article{
     cursor: pointer;
-    width: 400px;
+    width: 100%; /* Se ajustará automáticamente al tamaño de la columna */
     
     min-height: 500px;
     /* FFF8FB */
@@ -208,7 +216,7 @@ nav ul li:hover{
 
 #productos section article div h4 {
     color: #7A3E86;
-    font-style: bold;
+    font-weight: bold;
     font-size: 1.5rem;
 }
 #productos section article div p {
@@ -235,12 +243,12 @@ nav ul li:hover{
 
 #testimonio{
     border-radius: 20px;
-    margin: 50px 20px;
+    margin: 50px 10vw;
     grid-area: testimonio;
     background-color: #E8D7F1;
     padding: 30px;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); 
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
     
 }
 
@@ -294,7 +302,7 @@ nav ul li:hover{
     padding: 40px;
     border-radius: 20px;
     box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.1);
-    font-family: "Roboto", sans-serif;
+    font-family: var(--font-primary);
     max-width: 800px;
     margin: 30px auto;
 }
@@ -414,7 +422,7 @@ nav ul li:hover{
 
 
 footer{
-    font-family: "Dancing Script", cursive;
+    font-family: var(--font-secondary);
     background-color: #E8D7F1;
     display: flex;
     align-items: center;
@@ -432,14 +440,128 @@ footer a{
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     text-decoration: none;
     transition: transform 0.5s ease, background-color 0.3s ease;
-    
-
 }
+
 footer a:hover{
-    transform:  rotate(-5grad) scale(1.2);
+    transform:  rotate(-5deg) scale(1.2);
     background-color: white;
 }
 
+
+/* Icono del menú de hamburguesa */
+.menu-toggle {
+    display: none; /* Oculto por defecto */
+}
+
+.menu-toggle-label {
+    display: none; /* Oculto por defecto */
+    font-size: 2rem;
+    cursor: pointer;
+    color: #7A3E86;
+    user-select: none;
+    justify-self: end;
+    padding: 2%;
+}
+
+/* Diseño Responsivo */
+/* Keyframes para efecto fade-in */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+section img{
+    animation: reveal linear both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
+
+nav {
+    animation: animacion-header linear both;
+
+    animation-timeline: scroll(root block);
+
+    animation-range: 0 100px;
+    z-index: 1;
+}
+
+
+@keyframes animacion-header{
+    to{
+        background: rgba(255,255,255, .5);
+        backdrop-filter: blur(5px);
+    }
+}
+
+
+@keyframes reveal{
+    from{
+        opacity: 0;
+        translate: 0 100px;
+        scale: .5;
+    }
+    to{
+        opacity: 1; 
+        translate: 0 0;
+        scale: 1;
+    }
+}
+
+
+
+/* TABLETS */
+@media (max-width: 1023px) {
+   
+
+    header nav .menu {
+        display: none; /* Ocultamos el menú */
+    }
+
+    /* Mostramos el icono de hamburguesa */
+    .menu-toggle-label {
+        display: block;
+    }
+
+      /* Menú desplegable */
+    header nav .menu{
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background-color: #E8D7F1;
+        width: 200px;
+        flex-direction: column;
+        gap: 20px;
+        border-radius: 10px;
+        box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2);
+        padding: 10px;
+    }
+
+    /* Mostrar menú al activar la casilla */
+    .menu-toggle:checked ~ .menu{
+        display: flex;
+    }
+
+    #productos section{
+        grid-template-columns: repeat(2, 1fr); /* 3 columnas de ancho igual */
+    }
+}
+
+/* TELÉFONOS */
+@media (max-width: 768px) {
+
+    #productos section{
+        grid-template-columns: 1fr;
+    }
+
+}
 /* 
 Lila Pastel: #E8D7F1 – Un tono suave y acogedor para fondos o detalles.
 Lavanda: #D4A5E6 – Un morado delicado, ideal para destacar secciones o botones.

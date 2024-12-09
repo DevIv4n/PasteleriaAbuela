@@ -55,6 +55,6 @@ Resposive
 moviles
 Menu hamburguesa
 
-Animaciones la hacer scroll, como desvanecer en las secciones o efecto suave al mostrar imagenes
+Animaciones al hacer scroll, como desvanecer en las secciones o efecto suave al mostrar imagenes
 
 Tiempo 2 semanas
